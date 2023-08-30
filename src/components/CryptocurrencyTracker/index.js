@@ -34,25 +34,25 @@ class CryptocurrencyTracker extends Component {
   }
 
   renderCryptocurrenciesList = () => {
-      const {cryptocurrenciesData} = this.state
+    const {cryptocurrenciesData} = this.state
 
-      return <CryptocurrenciesList cryptocurrenciesData={cryptocurrenciesData}/>
+    return <CryptocurrenciesList cryptocurrenciesData={cryptocurrenciesData} />
   }
 
   renderLoader = () => (
-      <div data-testid="loader">
-      <Loader type"Rings" color="#ffffff" height={80} width={80}/>
-      </div>
+    <div data-testid="loader">
+      <Loader type="Rings" color="#ffffff" height={80} width={80} />
+    </div>
   )
 
   render() {
-      const {isLoading} = this.state
+    const {isLoading} = this.state
 
-      return (
-          <div>
-              {isLoading ? this.renderLoader() : this.renderCryptocurrenciesList()}
-          </div>
-      )
+    return (
+      <div>
+        {isLoading ? this.renderLoader() : this.renderCryptocurrenciesList()}
+      </div>
+    )
   }
 }
 
